@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body style="background-color: #313131;">
+    <button onclick="forceUpdate()">Update</button>
+    <p id="lastUpdateDisplay">last update: never</p>
+    <input type="password" id="token" placeholder="DuckDNS Token"> <label>DuckDNS Token</label>
+    <br>
+    <input type="number" id="interval" min="1" max="60" placeholder="Interval (minutes)"> <label>Interval (minutes)</label>
+    <br>
+    <input id="addDomainInput" type="text" placeholder="add new domain"> <button id="addDomainButton">add</button>
+    <br>
+    <table id="domainTable">
+      <tr>
+        <th><h2>test</h2></th>
+        <th><input type="checkbox"></th>
+        <th><button>delete</button></th>
+      </tr>
+    </table>
+    <p>domains needs to be registered manually at <a href="#" onclick="Neutralino.os.open('https\:\/\/www.duckdns.org\/')">https://www.duckdns.org/</a> before being updated</p>
+    <!-- Neutralino.js client. This file is gitignored, 
+        because `neu update` typically downloads it.
+        Avoid copy-pasting it. 
+        -->
+    <script src="js/neutralino.js"></script>
+    <!-- Your app's source files -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
